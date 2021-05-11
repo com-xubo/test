@@ -15,8 +15,20 @@
         });
         sensors.quick('autoTrack');
     </script>
+    <script src='./weixin.js'></script>
 </head>
 <body>
     <h1>hello world</h1>
+    <button id='weixin'>跳转到小程序</button>
+    <script>
+        let toMiniButton = document.getElementById('weixin');
+        toMiniButton.addEventListener('click', ()=>{
+            wx.miniProgram.navigateTo({
+                url: 'pages/index/index'
+            });
+        });
+
+    
+    </script>
 </body>
 </html>
